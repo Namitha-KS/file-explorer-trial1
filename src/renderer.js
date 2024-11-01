@@ -17,14 +17,10 @@ const INITIAL_VIEW_WIDTH = 3000;
 const INITIAL_VIEW_HEIGHT = 2000;
 const NODE_PADDING = 400;           // Increase padding for text in nodes
 const MIN_NODE_WIDTH = 2500;        // Increase minimum width for nodes
-const NODE_HEIGHT = 200;            // Increase node height for better visibility
-const NODE_WIDTH_PADDING = 200;     // More padding for wider boxes
-const MIN_HORIZONTAL_SPACING = 150; // Increase spacing between nodes
+const NODE_HEIGHT = 2000;            // Increase node height for better visibility
+// const NODE_WIDTH_PADDING = 200;     // More padding for wider boxes
+const MIN_HORIZONTAL_SPACING = 1500; // Increase spacing between nodes
 const VERTICAL_SPACING = 250;       // Increase vertical spacing between levels
-const MAX_ZOOM = 5;                 // Maximum zoom level
-const MIN_ZOOM = 0.1;               // Minimum zoom level
-const ZOOM_STEP = 0.1;              // Zoom step size
-const ZOOM_PAN_SPEED = 0.1;         // Speed of zoom and pan
 
 
 // Variables to track the SVG viewBox dimensions
@@ -246,8 +242,8 @@ function drawNode(item, x, y, width, parentPath) {
   
   // Set background color and border for better contrast
   rect.style.fill = "#f0f0f0";  // Light background color
-  rect.style.stroke = "#666";  // Border color
-  rect.style.strokeWidth = "0.5";  // Thinner border
+  rect.style.stroke = "#000000";  // Border color
+  rect.style.strokeWidth = "2.5";  // Thinner border
 
   const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
   text.setAttribute('x', x);
@@ -257,7 +253,7 @@ function drawNode(item, x, y, width, parentPath) {
   text.textContent = item.name;
 
   // Increased font size for better readability
-  text.style.fontSize = "20px";  // Increased font size
+  text.style.fontSize = "200px";  // Increased font size
   text.style.fill = "#333";  // Darker text color
 
   rect.addEventListener('click', (e) => {
