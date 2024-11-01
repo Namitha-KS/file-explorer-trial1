@@ -1,121 +1,79 @@
-/* Tailwind Base and Utilities */
-/* Import Tailwind CSS */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-/* Global styling */
 *,
 ::before,
 ::after {
   box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: #e5e7eb;
-}
-
-/* Basic Reset */
-body {
   margin: 0;
-  line-height: 1.5;
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  overflow: hidden; /* Prevent body scrolling */
+  padding: 0;
 }
 
-/* Styling for text */
-.text-3xl {
-  font-size: 2.5rem;
-  line-height: 3rem;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.font-bold {
-  font-weight: 700;
+.canvas-container {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 2rem;
 }
 
-/* Node and Button Styling */
-.node-box {
-  background-color: #f0f0f0;
-  border: 1px solid #666;
-  border-radius: 48px;
+.header {
+  background-color: #2563eb;
+  color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+.node-box {
+  fill: #f0f0f0;
+  stroke: #666;
+  stroke-width: 0.5;
+  border-radius: 8px;
   padding: 20px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .node-text {
-  font-size: 300px;
-  color: #333;
+  font-size: 30px;
+  fill: #333;
   font-weight: bold;
   text-align: center;
 }
 
-.home-button-bg {
-  fill: #3b82f6;
-  stroke: #2563eb;
-  stroke-width: 2;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.home-button-bg:hover {
-  fill: #2563eb;
-}
-
-.home-button-text {
-  fill: white;
-  font-size: 300px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* SVG and Container Styling */
 #tree-container, #svg-container, svg {
   width: 100%;
   height: 100%;
 }
 
-#canvas-container {
-  width: 100%;
-  height: 100vh;
-  overflow: auto;
-  padding: 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 .connection-line, path {
   stroke: #333;
-  stroke-width: 2px;
+  stroke-width: 1px;
   fill: none;
-}
-
-svg {
-  min-height: 200vh; /* Accommodate large content */
-}
-
-/* Custom Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
