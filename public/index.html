@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Explorer</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Compiled Tailwind CSS -->
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="flex flex-col h-screen">
+    <header class="bg-blue-600 text-white p-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold">File Explorer</h1>
+      <button id="home-button" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded">Home</button>
+    </header>
+    <div id="canvas-container" class="flex-grow overflow-auto"> <!-- Allow scrolling -->
+      <svg id="tree-container"></svg>
+    </div>
+  </div>
+  <script src="../src/renderer.js"></script>
+</body>
+</html>
