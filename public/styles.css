@@ -8,7 +8,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f3f4f6;
+  background-color: #ffffff;
 }
 
 .container {
@@ -24,7 +24,7 @@ body {
 }
 
 .header {
-  background-color: #2563eb;
+  background-color: #ffffff;
   color: white;
   display: flex;
   align-items: center;
@@ -38,9 +38,9 @@ body {
 }
 
 .button {
-  background-color: #3b82f6;
+  background-color: #ffffff;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   border: none;
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -55,14 +55,14 @@ body {
 .node-box {
   fill: #f0f0f0;
   stroke: #666;
-  stroke-width: 0.5;
+  stroke-width: 5.5;
   border-radius: 8px;
   padding: 20px;
 }
 
 .node-text {
-  font-size: 30px;
-  fill: #333;
+  font-size: 300rem;
+  fill: #ffffff;
   font-weight: bold;
   text-align: center;
 }
@@ -74,6 +74,6 @@ body {
 
 .connection-line, path {
   stroke: #333;
-  stroke-width: 1px;
+  stroke-width: 50px;
   fill: none;
 }
